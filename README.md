@@ -60,7 +60,13 @@ let alphaNumericString = myString.components(separatedBy: CharacterSet.alphanume
 
 // returns: "amanaplanacanalpanama"
 ```
-  
+### Step 3 - Create reversed version of input and compare
+
+Note: Necessary to initialize a new string using the `String()` constructor becasue `reversed()` returns a collection of characters rather then a string. 
+
+```swift
+return alphaNumericString == String(alphaNumericString.reversed())
+```
 
 
 
