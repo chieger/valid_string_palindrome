@@ -21,7 +21,25 @@ Output: false
 
 ## Approach
 
-### Step 1 - Convert input to alphanumeric character string
+### Step 1 - Handle case of empty string
+> we define empty string as valid palindrome
+
+```swift
+// Step 1: Handle case of empty string, return true
+if myString.isEmpty {
+   // return true
+} else {
+   // Step 2...
+}
+```
+
+This is a good situation to use guard, so you don't have to wrap the rest of the function in the `else` clause from a traditional if statement. Although I find the semantics slightly less intuitive since we have to test for the converse `!isEmpty`
+
+```swift
+guard myString.!isEmpty else { return true }
+```
+
+### Step 2 - Convert input to alphanumeric character string
 
 >...considering only alphanumeric characters
 
