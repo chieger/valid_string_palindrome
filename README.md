@@ -18,3 +18,31 @@ Output: true
 Input: "race a car"
 Output: false
 ```
+
+## Approach
+
+### Step 1 - Convert input to alphanumeric character string
+
+>...considering only alphanumeric characters
+
+Create a string from the input where all non-alpha numeric characters have been removed. Since spaces and other punctuation are not alphanumeric, an input of...
+
+`"A man, a plan, a canal: Panama"` should return `AmanaplanacanalPanama`
+
+> ...ignoring cases
+
+To ignore cases, we can normalize our string to either all upper or lower, i.e.      `amanaplanacanalpanama`
+
+```swift
+let myString = "A man, a plan, a canal: Panama"
+// .inverted will actually return the alpha numeric characters, stripping away non-aphanumeric
+// .components returns an array of sub-strings, so we use .joined() method to concat array into single string
+// To normalize case, we can use .lowercase
+let alphaNumericString = myString.components(separatedBy: CharacterSet.alphanumerics.inverted).joined().lowercased()
+
+// returns: "amanaplanacanalpanama"
+```
+  
+
+
+
