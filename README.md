@@ -25,13 +25,13 @@ Output: false
 
 >...considering only alphanumeric characters
 
-Create a string from the input where all non-alpha numeric characters have been removed. Since spaces and other punctuation are not alphanumeric, an input of...
+1. Create a string from the input where all non-alpha numeric characters have been removed. Since spaces and other punctuation are not alphanumeric, an input of...
 
 `"A man, a plan, a canal: Panama"` should return `AmanaplanacanalPanama`
 
-> ...ignoring cases
+   > ...ignoring cases
 
-To ignore cases, we can normalize our string to either all upper or lower, i.e.      `amanaplanacanalpanama`
+2. To ignore cases, we can normalize our string to either all upper or lower, i.e.      `amanaplanacanalpanama`
 
 ```swift
 let myString = "A man, a plan, a canal: Panama"
